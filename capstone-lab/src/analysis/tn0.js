@@ -1,0 +1,1 @@
+function regression(){let p=[];ids.forEach((id,i)=>[1,2,3].forEach(n=>{let r=sample(id+'-0'+n).r0;if(val(r)&&+r>0)p.push([(geo("Lc")*1000)/(doeRows()[i][2]**2),+r])}));if(p.length!==21)return null;let x=p.reduce((s,a)=>s+a[0],0)/21,y=p.reduce((s,a)=>s+a[1],0)/21,m=p.reduce((s,a)=>s+(a[0]-x)*(a[1]-y),0)/p.reduce((s,a)=>s+(a[0]-x)**2,0);return Number.isFinite(m)?[m,y-m*x]:null}

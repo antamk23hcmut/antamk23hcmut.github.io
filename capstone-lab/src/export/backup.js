@@ -1,0 +1,1 @@
+function download(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='capstone-backup.json';a.click();URL.revokeObjectURL(a.href)}

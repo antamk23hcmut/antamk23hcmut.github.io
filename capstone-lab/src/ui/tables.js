@@ -1,0 +1,1 @@
+function tbl(h,rows,raw=false){return `<div class="scroll"><table><thead><tr>${h.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(x=>`<td>${raw?x:esc(typeof x==='number'?fmt(x):x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}

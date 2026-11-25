@@ -1,0 +1,1 @@
+function fit(p){if(p.length<2)return null;let n=p.length,x=p.reduce((a,b)=>a+b[0],0)/n,y=p.reduce((a,b)=>a+b[1],0)/n,xx=p.reduce((a,b)=>a+(b[0]-x)**2,0);if(!xx)return null;let m=p.reduce((a,b)=>a+(b[0]-x)*(b[1]-y),0)/xx,b=y-m*x,e=p.map(v=>v[1]-m*v[0]-b),ss=e.reduce((a,v)=>a+v*v,0),tot=p.reduce((a,v)=>a+(v[1]-y)**2,0);return {m,b,r2:tot?1-ss/tot:NaN,rmse:Math.sqrt(ss/n),e}}

@@ -1,0 +1,1 @@
+function importMesh(){let rows=document.querySelector('#paste').value.trim().split(/\r?\n/).map(x=>x.trim().split(/\t+/).map(Number));if(rows.length>100||rows.some(x=>x.length!==5||x.some(v=>!Number.isFinite(v))))return alert('Cần 5 cột số, tối đa 100 dòng.');if(state.mesh[mi]?.length&&!confirm('Thay thế dữ liệu lưới hiện tại?'))return;state.mesh[mi]=rows;save();render()}
