@@ -1,0 +1,138 @@
+.project-overview {
+  padding: clamp(18px, 3vw, 32px);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.project-overview h2 {
+  margin: 0 0 0.7rem;
+  font-size: clamp(1.25rem, 2.1vw, 1.65rem);
+  line-height: 1.25;
+}
+
+.project-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(18px, 3vw, 34px);
+  align-items: center;
+  background: #eef5f8;
+}
+
+.project-intro h2 {
+  font-size: clamp(1.45rem, 2.5vw, 2.25rem);
+}
+
+.project-overview p {
+  margin: 0.65rem 0;
+}
+
+.project-lead {
+  font-weight: 600;
+}
+
+.project-figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.project-figure a {
+  display: block;
+  border: 1px solid #dbe3eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #445f73;
+}
+
+.project-geometry {
+  max-width: 62rem;
+  margin: 1.25rem auto 0;
+}
+
+.project-method,
+.project-quantities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0.9rem 0;
+}
+
+.project-method {
+  padding-left: 0;
+  list-style: none;
+}
+
+.project-method li,
+.project-quantities div {
+  min-width: 0;
+  border-radius: 8px;
+  background: #f3f7fa;
+  padding: 0.85rem 1rem;
+}
+
+.project-method h3,
+.project-quantities dt {
+  margin: 0;
+  color: #174e49;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.project-method p,
+.project-quantities dd {
+  margin: 0.35rem 0 0;
+}
+
+.project-equation {
+  padding: 0.65rem 0.85rem;
+  border-left: 3px solid #176b62;
+  background: #edf6f4;
+}
+
+.project-sources ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.project-sources li + li {
+  margin-top: 0.5rem;
+}
+
+.project-sources a,
+.project-progress-link {
+  color: #125b53;
+  text-underline-offset: 0.15em;
+}
+
+@media (max-width: 980px) {
+  .project-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .project-intro .project-figure {
+    max-width: 38rem;
+  }
+
+  .project-method,
+  .project-quantities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 570px) {
+  .project-method,
+  .project-quantities {
+    grid-template-columns: 1fr;
+  }
+}
