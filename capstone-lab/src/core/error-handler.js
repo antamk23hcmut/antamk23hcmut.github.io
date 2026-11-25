@@ -1,0 +1,1 @@
+window.addEventListener("error",e=>{const m=document.getElementById("cloudMessage");if(m&&!document.getElementById("cloudGate").hidden)m.textContent="Lỗi JavaScript: "+e.message});

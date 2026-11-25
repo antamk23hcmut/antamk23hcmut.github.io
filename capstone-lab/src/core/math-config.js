@@ -1,0 +1,1 @@
+window.MathJax={startup:{typeset:false},options:{enableAssistiveMml:false},svg:{fontCache:"none"}};
